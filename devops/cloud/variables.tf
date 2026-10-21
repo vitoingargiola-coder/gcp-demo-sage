@@ -1,14 +1,14 @@
 variable "project_id" {
-  type        = string
   description = "ID del progetto GCP"
+  type        = string
 }
 
 variable "region" {
+  description = "Regione GCP in cui creare le risorse"
   type        = string
-  description = "Regione GCP"
 }
 
 variable "resource_prefix" {
+  description = "Prefisso usato per i nomi delle risorse"
   type        = string
-  description = "Prefisso per il nome delle risorse"
 }
