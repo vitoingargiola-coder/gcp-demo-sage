@@ -102,6 +102,13 @@ resource "google_project_iam_member" "sage_run_vertex" {
   member  = "serviceAccount:${google_service_account.sage_run.email}"
 }
 
+# Permesso di chiamare Firestore.
+resource "google_project_iam_member" "sage_run_firestore" {
+  project = var.project_id
+  role    = "roles/datastore.user"
+  member  = "serviceAccount:${google_service_account.sage_run.email}"
+}
+
 # Accesso pubblico (non autenticato): chiunque può invocare il servizio.
 resource "google_cloud_run_v2_service_iam_member" "sage_public" {
   project  = var.project_id
