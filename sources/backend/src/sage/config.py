@@ -31,6 +31,10 @@ class AppConfig(BaseSettings):
     bq_dataset: str = "sage_analytics"
     bq_table: str = "question_log"
 
+    # Cloud Storage
+    instructions_bucket: str = "its-ict-vito-ingargiola-instructions"
+    instructions_blob: str = "istruzioni.md"
+
     # Ingestion
     chunk_max_chars: int = 1500
 
